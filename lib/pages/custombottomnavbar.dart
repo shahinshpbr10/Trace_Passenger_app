@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:trace_companion/pages/homepage.dart';
+import 'package:trace_companion/pages/settingpage.dart';
+import 'package:trace_companion/pages/travelhistorypage.dart';
 
 
 
@@ -14,7 +17,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    Placeholder(),Placeholder(),Placeholder(),Placeholder(),
+    HomePage(),TravelHistoryPage(),SettingsPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -41,13 +44,10 @@ class _BottomNavPageState extends State<BottomNavPage> {
             icon: Icon(Iconsax.home),
             label: 'Home',
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(Iconsax.document),
-            label: 'Documents',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Iconsax.location),
-            label: 'Live Bus',
+            icon: Icon(Iconsax.hierarchy_square),
+            label: 'History',
           ),
           BottomNavigationBarItem(
             icon: Icon(Iconsax.setting),
